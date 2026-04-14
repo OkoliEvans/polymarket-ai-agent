@@ -1,0 +1,28 @@
+# crates/api/Cargo.toml
+# Lightweight read-only API for the Veil dashboard UI.
+# Uses common for all DB access via diesel-async.
+
+[package]
+name    = "api"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "api"
+path = "src/main.rs"
+
+[dependencies]
+common             = { path = "../common" }
+actix-cors         = "0.7"
+actix-web          = "4"
+serde              = { workspace = true }
+serde_json         = { workspace = true }
+tokio              = { workspace = true }
+chrono             = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }
+dotenvy            = { workspace = true }
+uuid               = { workspace = true }
+anyhow             = { workspace = true }
+tokio-stream         = { workspace = true }
+futures-util          = { workspace = true }

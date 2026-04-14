@@ -1,0 +1,9 @@
+[package]
+name = "model"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = { workspace = true }
+diesel = { version = "2", features = ["postgres", "uuid", "chrono", "r2d2"] }
+diesel-async = { version = "0.4", features = ["postgres", "bb8"] }

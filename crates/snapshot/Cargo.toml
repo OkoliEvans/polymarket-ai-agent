@@ -1,0 +1,28 @@
+# crates/snapshot/Cargo.toml
+# Fetches live Polymarket market data and writes snapshots to the DB.
+# Used by the agent to get feature data for inference decisions.
+
+[package]
+name    = "snapshot"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "snapshot"
+path = "src/main.rs"
+
+[dependencies]
+common             = { path = "../common" }
+model              = { path = "../model" }
+anyhow             = { workspace = true }
+chrono             = { workspace = true }
+diesel             = { workspace = true }
+diesel-async       = { workspace = true }
+dotenvy            = { workspace = true }
+reqwest            = { workspace = true }
+serde              = { workspace = true }
+serde_json         = { workspace = true }
+tokio              = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }
+uuid               = { workspace = true }
